@@ -1,80 +1,103 @@
-/* General styling for the form */
+/* General reset for margin and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Body styling */
 body {
-    background-color: #f4f4f4;
+    background-color: #f0f4f8;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 20px;
 }
 
+/* Form container styling */
 .form-container {
     background-color: #fff;
-    padding: 20px 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
+    transition: all 0.3s ease;
 }
 
+.form-container:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading */
 h2 {
     text-align: center;
+    font-size: 26px;
     margin-bottom: 20px;
     color: #333;
 }
 
+/* Labels */
 label {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 8px;
     display: block;
-    color: #555;
+    color: #666;
+    font-weight: bold;
 }
 
+/* Input fields */
 input[type="text"],
 input[type="email"],
 input[type="date"],
 input[type="tel"] {
     width: 100%;
     padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="date"]:focus,
 input[type="tel"]:focus {
-    border-color: #00b4d8;
+    border-color: #0077b6;
     outline: none;
+    box-shadow: 0 0 8px rgba(0, 119, 182, 0.2);
 }
 
+/* Submit button */
 button {
     width: 100%;
-    background-color: #00b4d8;
+    background-color: #0077b6;
     color: white;
     padding: 14px;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #0077b6;
+    background-color: #005f8a;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
+/* Additional styling for button hover and focus */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 119, 182, 0.4);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
     .form-container {
-        padding: 20px;
+        padding: 30px;
     }
 
     h2 {
@@ -82,17 +105,17 @@ button:hover {
     }
 
     label {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     input[type="text"],
     input[type="email"],
     input[type="date"],
     input[type="tel"] {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     button {
-        font-size: 14px;
+        font-size: 15px;
     }
 }
