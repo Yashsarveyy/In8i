@@ -4,21 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
 </head>
 <body>
-    <h1>Register User</h1>
-    <form id="registrationForm">
-        <input type="text" id="name" placeholder="Name" required>
-        <input type="email" id="email" placeholder="Email" required>
-        <input type="date" id="dob" placeholder="Date of Birth" required>
-        <input type="text" id="phone" placeholder="Phone Number" required>
-        <button type="submit">Submit</button>
+
+<div class="form-container">
+    <form class="registration-form">
+        <h2>Registration Form</h2>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+
+        <button type="submit">Register</button>
     </form>
+</div>
 
-    <h2>Registered Users</h2>
-    <div id="usersList"></div>
-
-    <script src="script.js"></script>
 </body>
 </html>
